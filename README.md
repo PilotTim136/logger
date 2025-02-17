@@ -37,12 +37,14 @@ Debugf.LogError("fancy-log-error"); //error - red
 
 If you have C# Projects that don't open a console, you can use
 ```cs
-Debug.AllocConsole(); //this is for *using logger;*
-Debugf.AllocConsole(); //this is for *using logger.fancy;*
+Debug.AllocConsole();
 ```
 If you want to clear the console, you can do
 ```cs
 Debug.LogClear();
-Debugf.LogClear();
 ```
-> **notice**: `logger` and `logger.fancy` both have the same functions sometimes. like `AllocConsole()` and `LogClear()`.
+You can also get an Input from the user
+```cs
+string input = Debug.LogInput();
+```
+> **notice**: `logger` and `logger.fancy` both have the same functions sometimes. like `AllocConsole()`, `LogClear()` and `LogInput()`.
